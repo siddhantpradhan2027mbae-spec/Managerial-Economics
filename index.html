@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Assessment: Managerial Economics Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            position: relative;
+            background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            background-color: rgba(255, 107, 107, 0.5);
+            animation: ripple-animation 1s forwards;
+            pointer-events: none;
+        }
+        @keyframes ripple-animation {
+            to {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="bg-white shadow-md sticky top-0 z-10">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-gray-900">Managerial Economics: An Infographic</h1>
+            <p class="text-sm text-gray-600">Under the guidance of Prof. Gauri Apte</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+
+        <section id="elasticity" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center">Price Elasticity of Demand (PED)</h2>
+            <p class="text-center mb-8 max-w-3xl mx-auto">Price Elasticity of Demand measures how sensitive the quantity demanded of a good is to a change in its price. It's a key concept for pricing strategies and understanding consumer behavior.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Elastic Demand (>1)</h3>
+                    <p>Demand is highly sensitive to price changes. A small price increase leads to a large drop in demand. Typical for luxury goods with many substitutes.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Inelastic Demand (&lt;1)</h3>
+                    <p>Demand is not very sensitive to price changes. A large price increase leads to a small drop in demand. Common for necessities like fuel and medicine.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Unitary Elasticity (=1)</h3>
+                    <p>The percentage change in quantity demanded is equal to the percentage change in price. Total revenue remains constant when price changes.</p>
+                </div>
+            </div>
+
+            <div class="mt-10 bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                 <h3 class="text-xl font-semibold mb-4 text-center">PED Comparison: Short-Run vs. Long-Run</h3>
+                 <p class="text-center mb-6 max-w-2xl mx-auto">Consumer behavior adapts over time. Demand for many goods, like gasoline and airline tickets, is more elastic in the long run as people find substitutes or change habits.</p>
+                <div class="chart-container">
+                    <canvas id="pedChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="tariffs" class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-center">The Impact of Tariffs on Foreign Demand</h2>
+            <p class="text-center mb-8 max-w-3xl mx-auto">A tariff is a tax on imported goods. It raises the price for consumers and impacts foreign demand based on the product's price elasticity.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Macroeconomic Effects of US Tariffs</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <p class="font-semibold">US GDP Impact</p>
+                            <p class="text-2xl font-bold text-red-500">-0.6% to -1.0%</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Impact on India</p>
+                            <p class="text-2xl font-bold text-orange-500">200k-300k Jobs at Risk</p>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Impact on Euro Area Inflation</p>
+                            <p class="text-2xl font-bold text-blue-500">-0.3 percentage points</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-4 text-center">GDP Impact of US Tariff Hikes</h3>
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="gdpImpactChart"></canvas>
+                    </div>
+                </div>
+            </div>
+             <div class="mt-8 bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                <h3 class="text-xl font-semibold mb-2 text-center">Trade Re-routing: The Bystander Effect</h3>
+                <p class="text-center mb-6 max-w-3xl mx-auto">The US-China trade war didn't just reduce bilateral trade; it created new export opportunities for "bystander" countries whose goods could substitute for those affected by tariffs.</p>
+                <div class="flex justify-center items-center space-x-8 text-center">
+                    <div>
+                        <p class="text-4xl">🇲🇽</p>
+                        <p class="font-semibold">Mexico</p>
+                    </div>
+                     <div>
+                        <p class="text-4xl">🇹🇭</p>
+                        <p class="font-semibold">Thailand</p>
+                    </div>
+                    <div>
+                        <p class="text-4xl">🇻🇳</p>
+                        <p class="font-semibold">Vietnam</p>
+                    </div>
+                </div>
+                <p class="text-center mt-4 text-sm text-gray-600">These countries saw increased exports to the US as their products replaced more expensive Chinese goods.</p>
+            </div>
+        </section>
+
+        <section id="intervention">
+            <h2 class="text-2xl font-bold mb-4 text-center">Government Intervention in Markets</h2>
+            <p class="text-center mb-8 max-w-3xl mx-auto">Governments intervene in markets to correct failures, redistribute income, or protect consumers and producers. These interventions often have significant, sometimes unintended, consequences.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Price Ceilings</h3>
+                    <p class="mb-4">A maximum price set by the government. Intended to make goods affordable but often leads to shortages and lower quality.</p>
+                    <p class="font-bold text-red-500">Example: Rent control can lead to a shortage of available apartments.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Price Floors</h3>
+                    <p class="mb-4">A minimum price set by the government. Aims to protect producers but can cause surpluses.</p>
+                    <p class="font-bold text-green-500">Example: Minimum wage is a price floor for labor, which can lead to unemployment if set too high.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Excise Taxes</h3>
+                    <p class="mb-4">A tax on specific goods, often to discourage consumption (e.g., cigarettes, gasoline). The burden of the tax depends on elasticity.</p>
+                    <p class="font-bold text-purple-500">If demand is inelastic, consumers pay most of the tax.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Subsidies</h3>
+                    <p class="mb-4">Government payments to businesses to lower production costs and encourage output. Can lead to overproduction.</p>
+                     <p class="font-bold text-blue-500">Example: Agricultural subsidies can lower food prices but distort the market.</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
+                    <h3 class="text-xl font-semibold mb-2">Import Quotas</h3>
+                    <p class="mb-4">A limit on the quantity of a good that can be imported. Protects domestic industries but raises prices for consumers.</p>
+                     <p class="font-bold text-yellow-500">Reduces consumer choice and can provoke retaliation from other countries.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white mt-12 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-600">
+            <p>PRN: 25020448111 | Email: siddhant.pradhan2027mbae@sims.edu</p>
+            <p>Course: MBA – Executive | 2025 – 2027</p>
+        </div>
+    </footer>
+
+    <script>
+        const wrapLabel = (label) => {
+            const maxLength = 16;
+            if (label.length <= maxLength) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + word).length > maxLength) {
+                    lines.push(currentLine.trim());
+                    currentLine = '';
+                }
+                currentLine += word + ' ';
+            }
+            lines.push(currentLine.trim());
+            return lines;
+        };
+
+        const tooltipTitleCallback = (tooltipItems) => {
+            const item = tooltipItems[0];
+            let label = item.chart.data.labels[item.dataIndex];
+            if (Array.isArray(label)) {
+                return label.join(' ');
+            }
+            return label;
+        };
+        
+        const energeticPlayful = {
+            primary: '#FF6B6B',
+            secondary: '#FFD166',
+            accent: '#06D6A0',
+            neutral: '#118AB2',
+            dark: '#073B4C'
+        };
+
+        const pedData = {
+            labels: ['Gasoline', 'Airline Travel', 'Sugar-Sweetened Beverages', 'Luxury Cars', 'Cigarettes'].map(wrapLabel),
+            datasets: [
+                {
+                    label: 'Short-Run PED',
+                    data: [0.26, 0.69, 1.19, 2.0, 0.17],
+                    backgroundColor: energeticPlayful.primary,
+                    borderColor: energeticPlayful.primary,
+                    borderWidth: 1
+                },
+                {
+                    label: 'Long-Run PED',
+                    data: [0.58, 1.63, null, null, null],
+                    backgroundColor: energeticPlayful.secondary,
+                    borderColor: energeticPlayful.secondary,
+                    borderWidth: 1
+                }
+            ]
+        };
+
+        new Chart(document.getElementById('pedChart'), {
+            type: 'bar',
+            data: pedData,
+            options: {
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Price Elasticity of Demand (Absolute Value)'
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    },
+                    title: {
+                        display: true,
+                        text: 'Price Elasticity of Demand for Various Goods'
+                    }
+                }
+            }
+        });
+
+        const gdpImpactData = {
+            labels: ['United States', 'European Union'],
+            datasets: [{
+                label: 'GDP Impact (%)',
+                data: [-0.8, -0.2],
+                backgroundColor: [energeticPlayful.primary, energeticPlayful.accent],
+                borderColor: [energeticPlayful.primary, energeticPlayful.accent],
+                borderWidth: 1
+            }]
+        };
+
+        new Chart(document.getElementById('gdpImpactChart'), {
+            type: 'bar',
+            data: gdpImpactData,
+            options: {
+                indexAxis: 'y',
+                maintainAspectRatio: false,
+                scales: {
+                    x: {
+                        beginAtZero: false,
+                         title: {
+                            display: true,
+                            text: 'Percentage Change in GDP'
+                        }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            title: tooltipTitleCallback
+                        }
+                    }
+                }
+            }
+        });
+
+        document.body.addEventListener('mousedown', createRipple);
+        document.body.addEventListener('touchstart', createRipple);
+
+        function createRipple(event) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            const size = Math.max(document.body.clientWidth, document.body.clientHeight);
+            const radius = size / 2;
+            let clientX, clientY;
+
+            if (event.type === 'touchstart') {
+                clientX = event.touches[0].clientX;
+                clientY = event.touches[0].clientY;
+            } else {
+                clientX = event.clientX;
+                clientY = event.clientY;
+            }
+            
+            const x = clientX - radius;
+            const y = clientY - radius;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            
+            document.body.appendChild(ripple);
+
+            ripple.addEventListener('animationend', () => {
+                ripple.remove();
+            });
+        }
+    </script>
+
+</body>
+</html>
