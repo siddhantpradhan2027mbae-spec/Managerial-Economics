@@ -3,334 +3,372 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Internal Assessment: Managerial Economics Infographic</title>
+    <title>Monopoly and Emerging Competition | Case of Indian Railways</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden;
-            position: relative;
-            background: linear-gradient(135deg, #f0f4f8, #e2e8f0);
         }
         .chart-container {
             position: relative;
             width: 100%;
-            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            height: 300px;
-            max-height: 400px;
         }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
+        @keyframes fadeInRise {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .ripple {
-            position: absolute;
-            border-radius: 50%;
-            transform: scale(0);
-            background-color: rgba(255, 107, 107, 0.5);
-            animation: ripple-animation 1s forwards;
-            pointer-events: none;
-        }
-        @keyframes ripple-animation {
-            to {
-                transform: scale(4);
-                opacity: 0;
-            }
+        .fade-in-card {
+            animation: fadeInRise 0.8s ease-out both;
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="bg-white shadow-md sticky top-0 z-10">
-        <div class="container mx-auto px-6 py-4">
-            <h1 class="text-3xl font-bold text-gray-900">Managerial Economics: An Infographic</h1>
-            <p class="text-sm text-gray-600">Under the guidance of Prof. Gauri Apte</p>
-        </div>
-    </header>
+    <main class="container mx-auto p-4 md:p-8">
 
-    <main class="container mx-auto px-6 py-8">
-
-        <section id="elasticity" class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-center">Price Elasticity of Demand (PED)</h2>
-            <p class="text-center mb-8 max-w-3xl mx-auto">Price Elasticity of Demand measures how sensitive the quantity demanded of a good is to a change in its price. It's a key concept for pricing strategies and understanding consumer behavior.</p>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Elastic Demand (>1)</h3>
-                    <p>Demand is highly sensitive to price changes. A small price increase leads to a large drop in demand. Typical for luxury goods with many substitutes.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Inelastic Demand (&lt;1)</h3>
-                    <p>Demand is not very sensitive to price changes. A large price increase leads to a small drop in demand. Common for necessities like fuel and medicine.</p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Unitary Elasticity (=1)</h3>
-                    <p>The percentage change in quantity demanded is equal to the percentage change in price. Total revenue remains constant when price changes.</p>
-                </div>
+        <header class="text-center mb-12 fade-in-card" style="animation-delay: 0s;">
+            <h1 class="text-4xl md:text-5xl font-bold text-[#073B4C] mb-2">Monopoly and Emerging Competition</h1>
+            <p class="text-lg md:text-xl text-[#118AB2]">Case of Indian Railways</p>
+            <div class="text-sm text-gray-500 space-y-1 mt-4">
+                <p>Guided by: <span class="font-semibold">Gauri Apte</span></p>
+                <p>Name: <span class="font-semibold">Siddhant Deepak Kumar Pradhan</span> | PRN: <span class="font-semibold">25020448111</span></p>
+                <p>Course: MBA – Executive | 2025 – 2027</p>
             </div>
+        </header>
 
-            <div class="mt-10 bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                 <h3 class="text-xl font-semibold mb-4 text-center">PED Comparison: Short-Run vs. Long-Run</h3>
-                 <p class="text-center mb-6 max-w-2xl mx-auto">Consumer behavior adapts over time. Demand for many goods, like gasoline and airline tickets, is more elastic in the long run as people find substitutes or change habits.</p>
-                <div class="chart-container">
-                    <canvas id="pedChart"></canvas>
-                </div>
+        <section id="monopoly-pillars" class="mb-16">
+            <div class="max-w-4xl mx-auto text-center mb-8 fade-in-card" style="animation-delay: 0.3s;">
+                <h2 class="text-3xl font-bold text-[#073B4C] mb-4">The Core Monopoly</h2>
+                <p class="text-gray-600">
+                    Indian Railway Catering and Tourism Corporation (IRCTC) operates as a statutory monopoly, granted exclusive rights by the government over critical segments of the Indian Railways ecosystem. This legal barrier to entry has historically insulated it from direct competition in its most profitable areas.
+                </p>
             </div>
-        </section>
-
-        <section id="tariffs" class="mb-12">
-            <h2 class="text-2xl font-bold mb-4 text-center">The Impact of Tariffs on Foreign Demand</h2>
-            <p class="text-center mb-8 max-w-3xl mx-auto">A tariff is a tax on imported goods. It raises the price for consumers and impacts foreign demand based on the product's price elasticity.</p>
-
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Macroeconomic Effects of US Tariffs</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <p class="font-semibold">US GDP Impact</p>
-                            <p class="text-2xl font-bold text-red-500">-0.6% to -1.0%</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold">Impact on India</p>
-                            <p class="text-2xl font-bold text-orange-500">200k-300k Jobs at Risk</p>
-                        </div>
-                        <div>
-                            <p class="font-semibold">Impact on Euro Area Inflation</p>
-                            <p class="text-2xl font-bold text-blue-500">-0.3 percentage points</p>
-                        </div>
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 0.5s;">
+                    <h3 class="text-xl font-bold text-[#073B4C] mb-4">Pillars of Monopoly</h3>
+                    <p class="text-gray-600 mb-4">IRCTC's dominance is built on three exclusive rights, making it a classic price-maker in these segments. The most significant of these is its absolute control over the vast online train ticket market.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-xl mr-3 text-[#06D6A0]">&#10004;</span>
+                            <div>
+                                <h4 class="font-semibold">Online Ticketing</h4>
+                                <p class="text-sm text-gray-500">Processing over 80% of all reserved train bookings in India.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-xl mr-3 text-[#FFD166]">&#10004;</span>
+                            <div>
+                                <h4 class="font-semibold">On-Board Catering</h4>
+                                <p class="text-sm text-gray-500">Exclusive authorization for standardized food services on trains.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                             <span class="text-xl mr-3 text-[#FF6B6B]">&#10004;</span>
+                            <div>
+                                <h4 class="font-semibold">Packaged Water ('Rail Neer')</h4>
+                                <p class="text-sm text-gray-500">The sole supplier of packaged drinking water across the rail network.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 0.7s;">
+                    <div class="chart-container h-80 max-w-md">
+                        <canvas id="monopolyChart"></canvas>
                     </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-4 text-center">GDP Impact of US Tariff Hikes</h3>
-                    <div class="chart-container" style="height: 300px;">
-                        <canvas id="gdpImpactChart"></canvas>
-                    </div>
-                </div>
-            </div>
-             <div class="mt-8 bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                <h3 class="text-xl font-semibold mb-2 text-center">Trade Re-routing: The Bystander Effect</h3>
-                <p class="text-center mb-6 max-w-3xl mx-auto">The US-China trade war didn't just reduce bilateral trade; it created new export opportunities for "bystander" countries whose goods could substitute for those affected by tariffs.</p>
-                <div class="flex justify-center items-center space-x-8 text-center">
-                    <div>
-                        <p class="text-4xl">🇲🇽</p>
-                        <p class="font-semibold">Mexico</p>
-                    </div>
-                     <div>
-                        <p class="text-4xl">🇹🇭</p>
-                        <p class="font-semibold">Thailand</p>
-                    </div>
-                    <div>
-                        <p class="text-4xl">🇻🇳</p>
-                        <p class="font-semibold">Vietnam</p>
-                    </div>
-                </div>
-                <p class="text-center mt-4 text-sm text-gray-600">These countries saw increased exports to the US as their products replaced more expensive Chinese goods.</p>
             </div>
         </section>
 
-        <section id="intervention">
-            <h2 class="text-2xl font-bold mb-4 text-center">Government Intervention in Markets</h2>
-            <p class="text-center mb-8 max-w-3xl mx-auto">Governments intervene in markets to correct failures, redistribute income, or protect consumers and producers. These interventions often have significant, sometimes unintended, consequences.</p>
+        <section id="competition" class="mb-16">
+            <div class="max-w-4xl mx-auto text-center mb-8 fade-in-card" style="animation-delay: 0.9s;">
+                <h2 class="text-3xl font-bold text-[#073B4C] mb-4">Challenge 1: The Threat of Substitutes</h2>
+                <p class="text-gray-600">
+                    Even a monopoly cannot escape the economic principle of substitution. IRCTC's core service, rail travel, faces intense inter-modal competition, which introduces a higher-than-expected price elasticity of demand and limits its price-setting power.
+                </p>
+            </div>
+             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 1.1s;">
+                     <div class="chart-container h-96 max-w-lg">
+                        <canvas id="competitionRadarChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 1.3s;">
+                    <h3 class="text-xl font-bold text-[#073B4C] mb-4">Inter-Modal Competitive Landscape</h3>
+                    <p class="text-gray-600 mb-4">The radar chart visualizes the competitive strengths of railways against airlines and buses across key attributes. While railways offer superior reach, they lag in speed and flexibility, creating vulnerabilities that competitors exploit.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><strong class="text-[#06D6A0]">Airlines:</strong> Dominate on <span class="font-semibold">Speed</span> for long-distance routes, making the total 'time cost' competitive with premium AC train fares.</li>
+                        <li><strong class="text-[#FFD166]">Buses:</strong> Offer superior <span class="font-semibold">Flexibility</span> and point-to-point connectivity for short-to-medium distances, a segment where train travel can be cumbersome.</li>
+                        <li><strong class="text-[#118AB2]">Railways:</strong> Excel in <span class="font-semibold">Cost-Effectiveness</span> and unparalleled <span class="font-semibold">Network Reach</span>, which remain its core competitive advantages.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Price Ceilings</h3>
-                    <p class="mb-4">A maximum price set by the government. Intended to make goods affordable but often leads to shortages and lower quality.</p>
-                    <p class="font-bold text-red-500">Example: Rent control can lead to a shortage of available apartments.</p>
+        <section id="policy-risk" class="mb-16">
+            <div class="max-w-4xl mx-auto text-center mb-8 fade-in-card" style="animation-delay: 1.5s;">
+                <h2 class="text-3xl font-bold text-[#073B4C] mb-4">Challenge 2: Regulatory & Policy Risk</h2>
+                <p class="text-gray-600">
+                    As a Public Sector Undertaking (PSU), IRCTC's 'moat' is not determined by market forces alone but is highly sensitive to government policy. This creates significant uncertainty and acts as a major managerial constraint on long-term strategy.
+                </p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-8 fade-in-card" style="animation-delay: 1.7s;">
+                <div class="relative">
+                    <div class="absolute left-1/2 -translate-x-1/2 w-1 h-full bg-blue-200 rounded-full"></div>
+                    <div class="space-y-12">
+                        <div class="flex items-center w-full">
+                            <div class="w-1/2 pr-8">
+                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 text-right">
+                                    <h4 class="font-bold text-[#118AB2]">Convenience Fee Volatility</h4>
+                                    <p class="text-sm text-gray-600">The government has repeatedly altered the revenue-sharing model for the online ticketing convenience fee, directly impacting IRCTC's most profitable business segment overnight.</p>
+                                </div>
+                            </div>
+                            <div class="w-12 h-12 bg-[#118AB2] rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold z-10">1</div>
+                            <div class="w-1/2 pl-8"></div>
+                        </div>
+
+                        <div class="flex items-center w-full">
+                            <div class="w-1/2 pr-8"></div>
+                             <div class="w-12 h-12 bg-[#FF6B6B] rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold z-10">2</div>
+                            <div class="w-1/2 pl-8">
+                                <div class="bg-red-50 border border-red-200 rounded-lg p-4">
+                                    <h4 class="font-bold text-[#FF6B6B]">2010 Catering Policy Shift</h4>
+                                    <p class="text-sm text-gray-600">A major policy change temporarily removed catering control from IRCTC, decimating a primary revenue stream and forcing a costly organizational restructuring.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center w-full">
+                            <div class="w-1/2 pr-8">
+                                <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4 text-right">
+                                    <h4 class="font-bold text-[#FFD166]">Social Objective Conflict</h4>
+                                    <p class="text-sm text-gray-600">IRCTC must balance profit maximization with the government's social welfare mandates, such as cross-subsidizing passenger fares, which private firms do not have to consider.</p>
+                                </div>
+                            </div>
+                             <div class="w-12 h-12 bg-[#FFD166] rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold z-10">3</div>
+                            <div class="w-1/2 pl-8"></div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Price Floors</h3>
-                    <p class="mb-4">A minimum price set by the government. Aims to protect producers but can cause surpluses.</p>
-                    <p class="font-bold text-green-500">Example: Minimum wage is a price floor for labor, which can lead to unemployment if set too high.</p>
+            </div>
+        </section>
+
+        <section id="inefficiency" class="mb-16">
+            <div class="max-w-4xl mx-auto text-center mb-8 fade-in-card" style="animation-delay: 1.9s;">
+                <h2 class="text-3xl font-bold text-[#073B4C] mb-4">Challenge 3: Internal Inefficiency & Digital Threats</h2>
+                <p class="text-gray-600">
+                   The absence of direct competition can lead to a lack of X-efficiency (operational efficiency). This manifests as internal weaknesses that create opportunities for indirect competitors and future challengers.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 2.1s;">
+                    <h3 class="text-xl font-bold text-red-500 mb-4">Internal Weaknesses</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <h4 class="font-semibold">Poor Customer Experience</h4>
+                            <p class="text-sm text-gray-600">Users often face slow load times, failed transactions (especially during Tatkal bookings), and a cumbersome UI, pushing them towards smoother aggregator platforms like Paytm.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-semibold">Perceived Quality Gaps</h4>
+                            <p class="text-sm text-gray-600">Monopolistic control over catering has historically been associated with inconsistent food quality and service, encouraging passengers to seek alternatives.</p>
+                        </li>
+                    </ul>
                 </div>
-                <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Excise Taxes</h3>
-                    <p class="mb-4">A tax on specific goods, often to discourage consumption (e.g., cigarettes, gasoline). The burden of the tax depends on elasticity.</p>
-                    <p class="font-bold text-purple-500">If demand is inelastic, consumers pay most of the tax.</p>
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 2.3s;">
+                     <h3 class="text-xl font-bold text-yellow-500 mb-4">External Threats</h3>
+                     <ul class="space-y-4">
+                        <li>
+                            <h4 class="font-semibold">Aggregator Partners</h4>
+                            <p class="text-sm text-gray-600">While partners, third-party apps provide a superior booking experience, capturing user loyalty and data that IRCTC is failing to secure directly.</p>
+                        </li>
+                        <li>
+                            <h4 class="font-semibold">Future Privatization</h4>
+                            <p class="text-sm text-gray-600">The potential introduction of fully private passenger trains poses a direct threat to the operational monopoly, requiring IRCTC to improve efficiency now to compete later.</p>
+                        </li>
+                    </ul>
                 </div>
-                 <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Subsidies</h3>
-                    <p class="mb-4">Government payments to businesses to lower production costs and encourage output. Can lead to overproduction.</p>
-                     <p class="font-bold text-blue-500">Example: Agricultural subsidies can lower food prices but distort the market.</p>
+            </div>
+        </section>
+
+        <section id="conclusion">
+             <div class="max-w-4xl mx-auto text-center mb-8 fade-in-card" style="animation-delay: 2.5s;">
+                <h2 class="text-3xl font-bold text-[#073B4C] mb-4">Conclusion: Strategic Imperatives for a New Era</h2>
+                <p class="text-gray-600">
+                   To sustain profitability and relevance, IRCTC must transition its strategy from defending a legal monopoly to competing in an increasingly open market. The focus must shift towards operational excellence, diversification, and customer-centricity.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 2.7s;">
+                    <h4 class="font-bold text-lg text-[#06D6A0] mb-2">Diversify & Grow</h4>
+                    <p class="text-sm text-gray-600">Shift resources into high-growth, competitive sectors like tourism packages and budget hotels to reduce reliance on the core, regulated business.</p>
                 </div>
-                 <div class="bg-white p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 hover:shadow-2xl">
-                    <h3 class="text-xl font-semibold mb-2">Import Quotas</h3>
-                    <p class="mb-4">A limit on the quantity of a good that can be imported. Protects domestic industries but raises prices for consumers.</p>
-                     <p class="font-bold text-yellow-500">Reduces consumer choice and can provoke retaliation from other countries.</p>
+                 <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 2.9s;">
+                    <h4 class="font-bold text-lg text-[#118AB2] mb-2">Optimize Digitally</h4>
+                    <p class="text-sm text-gray-600">Invest heavily in server infrastructure and modern UI/UX design to improve the customer booking experience and reduce transaction failures.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 3.1s;">
+                    <h4 class="font-bold text-lg text-[#FFD166] mb-2">Improve Quality</h4>
+                    <p class="text-sm text-gray-600">Rigorously standardize and monitor catering quality to build brand trust and reduce passenger incentive to use external food vendors.</p>
+                </div>
+                 <div class="bg-white rounded-lg shadow-md p-6 fade-in-card" style="animation-delay: 3.3s;">
+                    <h4 class="font-bold text-lg text-[#FF6B6B] mb-2">Seek Autonomy</h4>
+                    <p class="text-sm text-gray-600">Advocate for greater policy stability and commercial autonomy from the government to enable long-term strategic planning and investment.</p>
                 </div>
             </div>
         </section>
 
     </main>
 
-    <footer class="bg-white mt-12 py-6">
-        <div class="container mx-auto px-6 text-center text-gray-600">
-            <p>PRN: 25020448111 | Email: siddhant.pradhan2027mbae@sims.edu</p>
-            <p>Course: MBA – Executive | 2025 – 2027</p>
-        </div>
-    </footer>
-
     <script>
-        const wrapLabel = (label) => {
-            const maxLength = 16;
-            if (label.length <= maxLength) {
-                return label;
-            }
-            const words = label.split(' ');
-            const lines = [];
-            let currentLine = '';
-            for (const word of words) {
-                if ((currentLine + word).length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = '';
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const COLORS = {
+                RED: '#FF6B6B',
+                YELLOW: '#FFD166',
+                GREEN: '#06D6A0',
+                BLUE: '#118AB2',
+                DARK_BLUE: '#073B4C'
+            };
+
+            const tooltipTitleCallback = (tooltipItems) => {
+                const item = tooltipItems[0];
+                let label = item.chart.data.labels[item.dataIndex];
+                if (Array.isArray(label)) {
+                    return label.join(' ');
+                } else {
+                    return label;
                 }
-                currentLine += word + ' ';
-            }
-            lines.push(currentLine.trim());
-            return lines;
-        };
+            };
+            
+            const wrapLabel = (label, maxWidth) => {
+                const words = label.split(' ');
+                let lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + word).length > maxWidth) {
+                        lines.push(currentLine.trim());
+                        currentLine = '';
+                    }
+                    currentLine += word + ' ';
+                });
+                lines.push(currentLine.trim());
+                return lines.filter(line => line !== '');
+            };
 
-        const tooltipTitleCallback = (tooltipItems) => {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-                return label.join(' ');
-            }
-            return label;
-        };
-        
-        const energeticPlayful = {
-            primary: '#FF6B6B',
-            secondary: '#FFD166',
-            accent: '#06D6A0',
-            neutral: '#118AB2',
-            dark: '#073B4C'
-        };
-
-        const pedData = {
-            labels: ['Gasoline', 'Airline Travel', 'Sugar-Sweetened Beverages', 'Luxury Cars', 'Cigarettes'].map(wrapLabel),
-            datasets: [
-                {
-                    label: 'Short-Run PED',
-                    data: [0.26, 0.69, 1.19, 2.0, 0.17],
-                    backgroundColor: energeticPlayful.primary,
-                    borderColor: energeticPlayful.primary,
-                    borderWidth: 1
+            const monopolyCtx = document.getElementById('monopolyChart').getContext('2d');
+            new Chart(monopolyCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Online Ticketing (>80%)', 'On-Board Catering', 'Packaged Water (Rail Neer)'],
+                    datasets: [{
+                        label: 'Monopoly Segments',
+                        data: [80, 12, 8],
+                        backgroundColor: [
+                            COLORS.GREEN,
+                            COLORS.YELLOW,
+                            COLORS.RED
+                        ],
+                        borderColor: '#fff',
+                        borderWidth: 4
+                    }]
                 },
-                {
-                    label: 'Long-Run PED',
-                    data: [0.58, 1.63, null, null, null],
-                    backgroundColor: energeticPlayful.secondary,
-                    borderColor: energeticPlayful.secondary,
-                    borderWidth: 1
-                }
-            ]
-        };
-
-        new Chart(document.getElementById('pedChart'), {
-            type: 'bar',
-            data: pedData,
-            options: {
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                        },
                         title: {
                             display: true,
-                            text: 'Price Elasticity of Demand (Absolute Value)'
-                        }
-                    }
-                },
-                plugins: {
-                    tooltip: {
-                        callbacks: {
-                            title: tooltipTitleCallback
-                        }
-                    },
-                    title: {
-                        display: true,
-                        text: 'Price Elasticity of Demand for Various Goods'
-                    }
-                }
-            }
-        });
-
-        const gdpImpactData = {
-            labels: ['United States', 'European Union'],
-            datasets: [{
-                label: 'GDP Impact (%)',
-                data: [-0.8, -0.2],
-                backgroundColor: [energeticPlayful.primary, energeticPlayful.accent],
-                borderColor: [energeticPlayful.primary, energeticPlayful.accent],
-                borderWidth: 1
-            }]
-        };
-
-        new Chart(document.getElementById('gdpImpactChart'), {
-            type: 'bar',
-            data: gdpImpactData,
-            options: {
-                indexAxis: 'y',
-                maintainAspectRatio: false,
-                scales: {
-                    x: {
-                        beginAtZero: false,
-                         title: {
-                            display: true,
-                            text: 'Percentage Change in GDP'
-                        }
-                    }
-                },
-                plugins: {
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        callbacks: {
-                            title: tooltipTitleCallback
+                            text: 'IRCTC Monopoly Segment Contribution (Conceptual)',
+                            color: COLORS.DARK_BLUE,
+                            font: { size: 16 }
+                        },
+                        tooltip: {
+                           callbacks: { title: tooltipTitleCallback }
                         }
                     }
                 }
-            }
-        });
-
-        document.body.addEventListener('mousedown', createRipple);
-        document.body.addEventListener('touchstart', createRipple);
-
-        function createRipple(event) {
-            const ripple = document.createElement('div');
-            ripple.className = 'ripple';
-            const size = Math.max(document.body.clientWidth, document.body.clientHeight);
-            const radius = size / 2;
-            let clientX, clientY;
-
-            if (event.type === 'touchstart') {
-                clientX = event.touches[0].clientX;
-                clientY = event.touches[0].clientY;
-            } else {
-                clientX = event.clientX;
-                clientY = event.clientY;
-            }
-            
-            const x = clientX - radius;
-            const y = clientY - radius;
-            
-            ripple.style.width = ripple.style.height = size + 'px';
-            ripple.style.left = x + 'px';
-            ripple.style.top = y + 'px';
-            
-            document.body.appendChild(ripple);
-
-            ripple.addEventListener('animationend', () => {
-                ripple.remove();
             });
-        }
+            
+            const competitionRadarCtx = document.getElementById('competitionRadarChart').getContext('2d');
+            const radarLabels = ['Speed', 'Cost-Effectiveness', 'Network Reach', 'Flexibility & Punctuality', 'Comfort'];
+            new Chart(competitionRadarCtx, {
+                type: 'radar',
+                data: {
+                    labels: radarLabels.map(l => l.length > 16 ? wrapLabel(l, 16) : l),
+                    datasets: [
+                        {
+                            label: 'Indian Railways',
+                            data: [3, 9, 10, 4, 6],
+                            fill: true,
+                            backgroundColor: 'rgba(17, 138, 178, 0.2)',
+                            borderColor: COLORS.BLUE,
+                            pointBackgroundColor: COLORS.BLUE,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: COLORS.BLUE
+                        },
+                        {
+                            label: 'Low-Cost Airlines',
+                            data: [9, 5, 4, 7, 5],
+                            fill: true,
+                            backgroundColor: 'rgba(6, 214, 160, 0.2)',
+                            borderColor: COLORS.GREEN,
+                            pointBackgroundColor: COLORS.GREEN,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: COLORS.GREEN
+                        },
+                        {
+                            label: 'Luxury Buses',
+                            data: [4, 7, 6, 9, 7],
+                            fill: true,
+                            backgroundColor: 'rgba(255, 209, 102, 0.2)',
+                            borderColor: COLORS.YELLOW,
+                            pointBackgroundColor: COLORS.YELLOW,
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: COLORS.YELLOW
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        r: {
+                            angleLines: { color: 'rgba(0, 0, 0, 0.1)' },
+                            grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                            pointLabels: { font: { size: 12 }, color: COLORS.DARK_BLUE },
+                            ticks: {
+                                backdropColor: 'rgba(255, 255, 255, 0.75)',
+                                color: COLORS.DARK_BLUE
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 10
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Competitive Analysis of Transport Modes (Rated 1-10)',
+                            color: COLORS.DARK_BLUE,
+                            font: { size: 16 }
+                        },
+                         tooltip: {
+                           callbacks: { title: tooltipTitleCallback }
+                        }
+                    }
+                }
+            });
+        });
     </script>
-
 </body>
 </html>
